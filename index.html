@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voluptas - Velas de Masajes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primario: #8e5a4e;
+      --color-secundario: #fffaf5;
+      --color-acento: #f7b267;
+      --texto-principal: #4e342e;
+    }
+
+    * {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--color-secundario);
+      color: var(--texto-principal);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    header {
+      background: linear-gradient(120deg, var(--color-primario), var(--color-acento));
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      animation: fadeInDown 1s ease;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: var(--color-primario);
+      padding: 1rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--color-acento);
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .botones-contacto {
+      margin: 2rem;
+      text-align: center;
+    }
+
+    .whatsapp-button, .instagram-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0.5rem;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .whatsapp-button {
+      background-color: #25D366;
+      color: white;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe5d;
+      transform: scale(1.05);
+    }
+
+    .instagram-button {
+      background-color: #E1306C;
+      color: white;
+    }
+
+    .instagram-button:hover {
+      background-color: #c72b60;
+      transform: scale(1.05);
+    }
+
+    .producto, .galeria img, .testimonio {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .producto:hover, .galeria img:hover, .testimonio:hover {
+      transform: scale(1.02);
+      opacity: 0.95;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .galeria img {
+      max-width: 45%;
+      margin: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .producto {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    footer {
+      background-color: var(--color-primario);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/logo-voluptas.png" alt="Logo Voluptas" style="max-width: 100px;">
+    <h1>Voluptas</h1>
+    <p>El placer de cuidarte con nuestras velas de masajes artesanales</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#mision">Misión</a>
+    <a href="#vision">Visión</a>
+    <a href="#galeria">Galería</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenido a Voluptas</h2>
+    <p>Descubre el arte del bienestar a través de nuestras velas de masajes hechas con ingredientes naturales como manteca de karité, cera de soya y aceites esenciales. Perfectas para relajarte y consentir tu piel.</p>
+  </section>
+
+  <section id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="img/producto1.jpg" alt="Vela de masaje 1">
+        <h3>Vela Relajante</h3>
+        <p>Con aroma de lavanda y aceite de coco.</p>
+      </div>
+      <div class="producto">
+        <img src="img/producto2.jpg" alt="Vela de masaje 2">
+        <h3>Vela Energizante</h3>
+        <p>Hecha con cítricos y manteca de karité.</p>
+      </div>
+    </div>
+    <h2 style="margin-top:3rem">Materia Prima</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="img/materia1.jpg" alt="Aceites esenciales">
+        <h3>cera de soya</h3>
+        <p>Puros y naturales, extraídos para cuidar tu piel.</p>
+      </div>
+      <div class="producto">
+        <img src="img/materia2.jpg" alt="Manteca y cera de soya">
+        <h3>aceites esenciales</h3>
+        <p>Manteca de karité y cera de soya de alta calidad.</p>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top: 1rem;">También vendemos la materia prima de las velas por si deseas hacerlas por ti mismo.</p>
+  </section>
+
+  <section id="mision">
+    <h2>Misión</h2>
+    <p>Brindar experiencias de relajación y cuidado personal con velas de masajes elaboradas artesanalmente con ingredientes naturales de alta calidad.</p>
+  </section>
+
+  <section id="vision">
+    <h2>Visión</h2>
+    <p>Ser reconocidos como la marca líder en bienestar sensorial a través de productos sostenibles, artesanales y únicos.</p>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="img/materia1.jpg" alt="Aceites esenciales 1">
+      <img src="img/materia2.jpg" alt="Aceites esenciales 2">
+      <img src="img/materia3.jpg" alt="Aceites esenciales 3">
+      <img src="img/materia4.jpg" alt="Aceites esenciales 4">
+    </div>
+  </section>
+
+  <section id="testimonios">
+    <h2>Testimonios</h2>
+    <div class="testimonios">
+      <div class="testimonio">
+        <p>“Las velas de Voluptas transformaron mi rutina nocturna. ¡Las amo!” - Carolina</p>
+      </div>
+      <div class="testimonio">
+        <p>“Una experiencia relajante y natural. ¡Recomendadas al 100%!” - Andrés</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Para hacer tus pedidos o resolver cualquier duda, contáctanos a través de los siguientes medios:</p>
+    <div class="botones-contacto">
+      <a class="whatsapp-button" href="https://wa.me/573125623824" target="_blank">WhatsApp</a>
+      <a class="instagram-button" href="https://instagram.com/deleite.voluptas" target="_blank">Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Voluptas. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
